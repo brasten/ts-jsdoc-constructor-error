@@ -1,4 +1,6 @@
 
+Using TypeScript 3.7.0-beta.
+
 ## Description of problem ##
 
 Running `tsc -b` with repository as-is results in error:
@@ -21,3 +23,5 @@ NOTE that simply removing the `@constructor` JSDoc annotation from
 `src/Dependency.js:7` resolves the problem. `@constructor` IS in fact incorrect,
 but it is really difficult to track down what's causing the situation when it
 occurs.
+
+This seems to compile fine under 3.6.4.
