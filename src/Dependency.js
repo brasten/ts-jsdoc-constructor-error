@@ -1,8 +1,6 @@
 
 
 /**
- * Some dependency.
- *
  * @param {object} opts
  * @constructor
  */

@@ -21,12 +21,17 @@ TypeError: Cannot read property 'parent' of undefined
 
 ### Observations ###
 
-NOTE that simply removing the `@constructor` JSDoc annotation from
+Minor tweaks that result in successful compilation:
+
+- Simply removing the `@constructor` JSDoc annotation from
 `src/Dependency.js:7` resolves the problem. `@constructor` IS in fact incorrect,
 but it is really difficult to track down what's causing the situation when it
 occurs.
 
-Also, changing `src/index.js` to `src/index.ts` permits compilation without error.
+- Changing `src/index.js` to `src/index.ts` permits compilation without error.
+
+- Changing `src/index.js:2` from `const deps = Dependency({});` to
+  `const deps = new Dependency({});` permits compilation without error.
 
 This compiles without error in 3.6.4.
 
